@@ -1,34 +1,164 @@
 :root {
   --brand-color: #ff6c00;
+  --black-color: #303030;
+  --white-color: #ffffff;
+  --gray-color: rgba(157, 164, 189, 0.6);
+  --content-color: #555;
+  --text-font-family: "Open Sans", sans-serif;
+  --header-font-family: "Raleway", sans-serif;
 }
+
+/* Global styles */
+*,
+* ::before * ::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: var(--text-font-family);
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Classes */
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
 .social-media-link {
-  color: #303030;
+  color: var(--black-color);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.2px;
 }
 
-.social-media-link:hover {
+.social-media-link:hover,
+.social-media-link:focus {
   color: var(--brand-color);
 }
 
-.hero-content {
-  /* TODO: replace with image background */
-  background-color: #303030;
-  color: #ffffff;
+.subtitle-container {
+  display: flex;
+  gap: 20px;
 }
 
-.nav-about {
+.nav-link {
+  color: var(--white-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
+}
+.nav-link:hover,
+.nav-link:focus {
   color: var(--brand-color);
-}
-
-.nav-links {
-  color: #ffffff;
 }
 
 .address-phone-number {
-  color: #ffffff;
+  color: var(--white-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.address-phone-number:hover,
+.address-phone-number:focus {
+  color: var(--brand-color);
 }
 
 .book-service-button {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-  border-color: var(--brand-color);
+  background: none;
+  border-radius: 25px;
+  border: 1px solid var(--brand-color);
+  padding: 12px 24px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.book-service-button-light {
+  color: var(--white-color);
+}
+.book-service-button-dark {
+  color: var(--black-color);
+}
+
+.book-service-button:hover,
+.book-service-button:focus {
+  color: var(--white-color);
+  background-color: var(--brand-color);
+}
+
+.subtitle {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.subtitle-dark {
+  color: var(--black-color);
+}
+
+.subtitle-light {
+  color: var(--gray-color);
+}
+
+.header {
+  font-family: var(--header-font-family);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.1px;
+}
+
+.header-dark {
+  color: var(--black-color);
+}
+
+.header-light {
+  color: var(--white-color);
+}
+
+.why-us-cards {
+  --card-width: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  max-width: calc(var(--card-width) * 2 + 30px);
+}
+
+.why-us-card {
+  flex-basis: var(--card-width);
+  height: 133px;
+  background-color: #f7f7f7;
+}
+
+.why-us-card-shifted {
+  margin-top: 30px;
 }
